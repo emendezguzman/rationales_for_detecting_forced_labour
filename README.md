@@ -6,11 +6,11 @@ This repository presents, to the best of our knowledge, the first openly accessi
 
 Our goal is to provide richer annotations for training text classification models, i.e., labels with rationales [[2]](#2). When annotating a news article, our annotators also highlight the evidence supporting their annotation, thereby allowing classifiers to learn \emph{why} the instance belongs to a certain category.
 
-##Annotation
+## Annotation
 
 We developed an annotation scheme to guide annotators in labelling news articles. The scheme is based on the 11 indicators of forced labour defined by the ILO [[3]](#3). These indicators are intended to help law enforcement officials, labour inspectors, and NGO workers to identify persons who are possibly trapped in a forced labour situation. For a detailed description of the indicators of forced labour and examples for each one of them, we refer the reader to the Annotation Guidelines.
 
-##Documentation
+## Documentation
 
 The corpus consists of **989 news articles** retrieved from specialised data sources and annotated according to the annotation schema detailed in the Annotation Guidelines.
 
@@ -23,7 +23,7 @@ The JSON file is structured as follows:
 - **Set**: String detailing the role of the example in classification experiments (train, validation and test set).
 - **Rationales**: List of rationales, specifyng both the text and label for which the rationales were provided.
 
-##References
+## References
 
 <a id="1">[1]</a> 
 Landman, T. and Silverman, B. (2019). 
