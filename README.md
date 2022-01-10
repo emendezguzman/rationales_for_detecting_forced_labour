@@ -52,10 +52,10 @@ git clone https://github.com/emendezguzman/rationales_for_detecting_forced_labou
 The classification experiments were performed with the aid of the [Simple Transformers](https://simpletransformers.ai/) library, a Python package based on the Transformers library by HuggingFace [[5]](#5).
 
 For the task at hand, we fine-tuned the following transformer-based models on our data set:
-- **DistilBERT** [[6]](#6)\cite{sanh2019distilbert}: A smaller and faster transformer model trained by distilling BERT base [[7]](#7) \cite{devlin2018bert}. 
-- **ALBERT** [[8]](#8) \cite{lan2019albert}: A light version of BERT \cite{devlin2018bert} that uses parameter-reduction techniques that allow for large-scale configurations.
-- **RoBERTa** [[9]](#9)\cite{liu2019roberta}: A retraining of BERT with improved architecture and training methodology.  For this model, we use the `base', `distil-roberta' and `large' versions.
-- **XLNet** [[10]](#10)\cite{yang2019xlnet}: A generalized autoregressive pre-trained method that uses improved training methodology and larger data than BERT [[7]](#7) \cite{devlin2018bert}.
+- **DistilBERT** [[6]](#6): A smaller and faster transformer model trained by distilling BERT base [[7]](#7). 
+- **ALBERT** [[8]](#8): A light version of BERT \cite{devlin2018bert} that uses parameter-reduction techniques that allow for large-scale configurations.
+- **RoBERTa** [[9]](#9): A retraining of BERT with improved architecture and training methodology.  For this model, we use the `base', `distil-roberta' and `large' versions.
+- **XLNet** [[10]](#10): A generalized autoregressive pre-trained method that uses improved training methodology and larger data than BERT [[7]](#7).
 
 ### Hyperparameter Tuning
 
