@@ -51,13 +51,19 @@ git clone https://github.com/emendezguzman/rationales_for_detecting_forced_labou
 
 The classification experiments were performed with the aid of the [Simple Transformers](https://simpletransformers.ai/) library, a Python package based on the Transformers library by HuggingFace [[5]](#5).
 
+For the task at hand, we fine-tuned the following transformer-based models on our data set:
+- **DistilBERT** [[6]](#6)\cite{sanh2019distilbert}: A smaller and faster transformer model trained by distilling BERT base [[7]](#7) \cite{devlin2018bert}. 
+- **ALBERT** [[8]](#8) \cite{lan2019albert}: A light version of BERT \cite{devlin2018bert} that uses parameter-reduction techniques that allow for large-scale configurations.
+- **RoBERTa** [[9]](#9)\cite{liu2019roberta}: A retraining of BERT with improved architecture and training methodology.  For this model, we use the `base', `distil-roberta' and `large' versions.
+- **XLNet** [[10]](#10)\cite{yang2019xlnet}: A generalized autoregressive pre-trained method that uses improved training methodology and larger data than BERT [[7]](#7) \cite{devlin2018bert}.
+
 ### Hyperparameter Tuning
 
-We split the data set into training, validation and test sets according to a 70:10:20 ratio and search the hyperparameter values that minimise the function loss over the validation set. To optimise the training process, we tuned the model hyperparameters using a random search method and run a total of 40 training runs using WandB [[6]](#6). For more details about the implementation please refer to **hyperparameter_tuning.ipynb**.
+We split the data set into training, validation and test sets according to a 70:10:20 ratio and search the hyperparameter values that minimise the function loss over the validation set. To optimise the training process, we tuned the model hyperparameters using a random search method and run a total of 40 training runs using WandB [[11]](#11). For more details about the implementation please refer to **hyperparameter_tuning.ipynb**.
 
 ### Model Evaluation
 
-Finally, we employed four metrics to evaluate the performance of our baseline classifiers: F1 Score (F1), Label Ranking Precision Average Precision Score (LRAP), and Exact Match Ratio (EMR) [[7]](#7). For details about the implementation please refer to **evaluation.ipynb**.
+Finally, we employed four metrics to evaluate the performance of our baseline classifiers: F1 Score (F1), Label Ranking Precision Average Precision Score (LRAP), and Exact Match Ratio (EMR) [[12]](#12). For details about the implementation please refer to **evaluation.ipynb**.
 
 ## References
 
@@ -87,11 +93,36 @@ Huggingface's transformers: State-of-the-art natural language processing
 arXiv preprint arXiv:1910.03771
 
 <a id="6">[6]</a>
-Biewald L. (2020).
-Experiment tracking with weights and biases
-Software available from wandb.com
+Sanh, V., Debut, L., Chaumond, J. and Wolf, T. (2019).
+DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter
+arXiv preprint arXiv:1910.01108
 
 <a id="7">[7]</a>
+Devlin, J., Chang, M., Lee, K. and Toutanova, K. (2018).
+Bert: Pre-training of deep bidirectional transformers for language understanding
+arXiv preprint arXiv:1810.04805
+
+<a id="8">[8]</a>
+Lan, Z., Chen, M., Goodman, S., Gimpel, K., Sharma, P. and Soricut, R. (2019).
+Albert: A lite bert for self-supervised learning of language representations
+arXiv preprint arXiv:1909.11942
+
+<a id="9">[9]</a>
+Liu, Y. et al. (2019).
+Roberta: A robustly optimized bert pretraining approach
+arXiv preprint arXiv:1907.11692
+
+<a id="10">[10]</a>
+Yang, Z. et al. (2019).
+Xlnet: Generalized autoregressive pretraining for language understanding
+Advances in neural information processing systems no. 32.
+
+<a id="11">[11]</a>
+Biewald, L. (2020)
+Experiment tracking with weights and biases, 
+Software available from wandb.com
+
+<a id="12">[12]</a>
 Feldman, R. and Sanger, J. (2007).
 The text mining handbook: advanced approaches in analyzing unstructured data
 Software available from wandb.com
