@@ -4,7 +4,7 @@ Forced labour is the most common type of modern slavery, affecting at least 24.9
 
 This repository presents, to the best of our knowledge, the first openly accessible English corpus annotated for multi-class and multi-label forced labour detection.
 
-Our goal is to provide richer annotations for training text classification models, i.e., labels with rationales [[2]](#2). When annotating a news article, our annotators also highlight the evidence supporting their annotation, thereby allowing classifiers to learn \emph{why} the instance belongs to a certain category.
+Our goal is to provide richer annotations for training text classification models, i.e., labels with rationales [[2]](#2). When annotating a news article, our annotators also highlight the evidence supporting their annotation, thereby allowing classifiers to learn *why* the instance belongs to a certain category.
 
 ## Data Annotation
 
