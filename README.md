@@ -10,7 +10,7 @@ Our goal is to provide richer annotations for training text classification model
 
 We developed an annotation scheme to guide annotators in labelling news articles. The scheme is based on the 11 indicators of forced labour defined by the ILO [[3]](#3). These indicators are intended to help law enforcement officials, labour inspectors, and NGO workers to identify persons who are possibly trapped in a forced labour situation. For a detailed description of the indicators of forced labour and examples for each one of them, we refer the reader to the **Annotation Guidelines**.
 
-## Corpus
+## Corpus (v.1.0)
 
 The corpus consists of **989 news articles** retrieved from specialised data sources and annotated according to the annotation schema detailed in the Annotation Guidelines.
 
